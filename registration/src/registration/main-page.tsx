@@ -17,28 +17,21 @@ function JobForm({ formName, formId }: FormProps) {
 
     return (
 
-
         <div className="container-fluid">
-
-
             <div className="row">
                 <div className="col-sm-6 col-md-2 col-lg-2 p-0 mx-sm-0 mx-md-3 mx-lg-3">
                 <div className="d-flex justify-content-center mt-5 ms-2">
                             <img src={logo} width={250} style={{borderRadius : "10px"}} />
                         </div>
-                    <div className="card mt-2 py-4" style={{background:'black'}}>
+                    <div className="card mt-2 py-4">
                        
                         <div className="p-3 text-center">
-                            <p className="h2" style={{color :"#fbe7ac"}}>GREJ STAFFING AGENCY</p>
-                            <p className="lead fs-6 p-2 text-center text-white">
-                                We have lot of jobs here, sign up to continue
-                                <p className="lead fs-6"><a href="" className="text-white">Terms and Conditions</a></p>
+                            <p className="h2 text-dark">GREJ STAFFING AGENCY</p>
+                            <p className=" fs-6 p-2 text-center text-dark">
+                                We have lot of jobs here, Click Next to Continue
+                                {/* <p className="lead fs-6"><a href="" className="text-white">Terms and Conditions</a></p> */}
                             </p>
-
-
                         </div>
-
-
                     </div>
                 </div>
                 <div className="col-sm-9 col-md-9 col-lg-9">

@@ -83,6 +83,27 @@ function AccountSummary({ client, PreviousActiveStep, NextActiveStep }: AccountS
                 
         }
         catch (error) {
+            console.log('my err',error)
+            if(error){
+                setShowSpinners(false)
+
+                swal({
+                    title: "Network Error",
+                    text: "Sorry an error occured Please try again later",
+                    icon: "error",
+                    buttons: {
+                        confirm: {
+                            text: "Okay",
+                            value: true,
+                            visible :true,
+                             className : "bg-danger",
+                             closeModal :true
+                        }
+                    
+                    }
+                })
+
+            }
             console.log('my errror', error)
         }
 
@@ -107,11 +128,11 @@ function AccountSummary({ client, PreviousActiveStep, NextActiveStep }: AccountS
                         width : '100vw',
                         height : '100vh',
                         background :'rgba(0,0,0,0.4)',
-                        backdropFilter : 'blur(3px)',
+                        backdropFilter : 'blur(2px)',
                         zIndex : 1
                     }}>
                      <div className="row d-flex justify-content-center align-content-center vh-100">   
-                        <ClipLoader size={150} color="#ec5252" loading={showSpinners} speedMultiplier={5} />
+                        <ClipLoader size={100} color="#dc3545" loading={showSpinners} />
                        </div>
                         </div>)
             }

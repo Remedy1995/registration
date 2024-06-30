@@ -3,8 +3,10 @@ import axios from 'axios';
 class JobSeekerService {
 
     async RegisterJobSeeker(data) {
+        const url = process.env.REACT_APP_SERVER_URL;
         try {
-            const res = await axios.post(`http://localhost:4000/jobseeker/jobseeker`, data);
+            console.log('my url',url)
+            const res = await axios.post(`${url}/jobseeker/jobseeker`, data);
             const response = res.data;
             console.log(response);
             if (response.status) {
